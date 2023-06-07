@@ -1,0 +1,3 @@
+#!/bin/bash
+file_path="/tmp/my_first_directory/betty"
+rm "$file_path"
