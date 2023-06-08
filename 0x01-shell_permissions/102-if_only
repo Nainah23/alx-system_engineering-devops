@@ -1,0 +1,2 @@
+#!/bin/bash
+[(200~stat -c %U file) = guillaume ] chown betty
