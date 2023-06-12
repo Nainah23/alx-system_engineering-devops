@@ -1,2 +1,2 @@
 #!/bin/bash
-read -p "Enter input: " input; rev <<< "$input"
+read -p reverse input; rev <<< reverse
