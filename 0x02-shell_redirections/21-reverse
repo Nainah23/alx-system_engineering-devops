@@ -1,2 +1,2 @@
 #!/bin/bash
-read -p reverse input; rev <<< reverse
+rev <<< $input
