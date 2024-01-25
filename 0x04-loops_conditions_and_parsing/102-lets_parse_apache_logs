@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Shebang line specifying the interpreter to be used (bash).
+
+# Parses Apache log files in list format.
+# Displays the IP and HTTP status code.
+
+# Using awk to print the first (IP) and ninth (HTTP status code) fields from the apache-access.log file.
+awk '{print $1 " " $9}' apache-access.log
