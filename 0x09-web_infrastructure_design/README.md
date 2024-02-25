@@ -1,4 +1,4 @@
-# Web Infrastructure Design
+# Web Infrastructure Design.
 
 ## Project Overview
 This project focuses on designing various web infrastructures to host the website www.foobar.com. Each task involves different configurations to address specific requirements and challenges.
