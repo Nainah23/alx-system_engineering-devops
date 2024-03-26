@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Install nginx on your web-01 server
-# Nginx should be listening on port 80
-# When querying Nginx at its root / with a GET request (requesting a page) using curl, it must return a page that contains the string Hello World!
+# Configure your Nginx server so that /redirect_me is redirecting to another page.
+# Requirements:
+#+ The redirection must be a “301 Moved Permanently”
 
 #  updates the package lists for available software packages.
 apt-get update
@@ -23,6 +23,26 @@ printf %s "server {
 }
 " > /etc/nginx/sites-available/default
 
-# Restarts the Nginx service to apply the configuration changes.
-service nginx restart
+# Configure a new server block for redirection
+echo "server {
+    listen 80;
+    listen [::]:80;
+
+    root /var/www/html;
+
+    # Add index.php to the list if you are using PHP
+    index index.html index.htm index.nginx-debian.html;
+
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+}" | sudo tee /etc/nginx/sites-available/redirect
+
+# Enable the new site configuration
+sudo ln -s /etc/nginx/sites-available/redirect /etc/nginx/sites-enabled/
+
+
+# Test Nginx configuration and reload
+sudo nginx -t
+sudo service nginx reload
 
