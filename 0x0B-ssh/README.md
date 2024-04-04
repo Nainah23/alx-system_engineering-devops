@@ -26,7 +26,7 @@ This script generates an RSA key pair.
 **Requirements:**
 - Create a private key named `school` with 4096 bits and protected by the passphrase `betty`.
 
-**Usage:**
+**Usage:.**
 ```bash
 ./1-create_ssh_key_pair
 ```
