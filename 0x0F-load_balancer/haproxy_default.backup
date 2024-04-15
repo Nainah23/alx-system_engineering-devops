@@ -1,0 +1,17 @@
+
+defaults
+  mode http
+  timeout client 15s
+  timeout connect 10s
+  timeout server 15s
+  timeout http-request 10s
+
+frontend nainah-tech-frontend
+    bind *:80
+    default_backend nainah-tech-backend
+
+backend nainah-tech-backend
+    balance roundrobin
+    server 436895--web-01 34.224.95.249:80 check
+    server 436895--web-02 18.207.234.122:80 check
+
