@@ -71,4 +71,4 @@ sudo ufw enable
 Repository Information
 GitHub Repository: alx-system_engineering-devops
 Directory: 0x13-firewall
-File: 100-port_forwarding
+File: 100-port_forwardin
