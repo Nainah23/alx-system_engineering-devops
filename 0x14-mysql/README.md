@@ -1,5 +1,4 @@
 ---
-
 # MySQL Tasks README
 
 ## Overview
