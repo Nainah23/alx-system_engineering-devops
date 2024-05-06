@@ -1,5 +1,4 @@
 ---
-
 # My First Postmortem
 
 ## Issue Summary
